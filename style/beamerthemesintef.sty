@@ -1,4 +1,4 @@
-\ProvidesPackage{beamerthemesintef}[2021/11/02]
+\ProvidesPackage{beamerthemesintef}[beamerthemesintef]
 \RequirePackage{etoolbox}
 \RequirePackage{tikz}
 \RequirePackage{geometry}
@@ -227,12 +227,17 @@
       \centering
       \ifstrequal{#1}{notitle}{}{
         \Huge \inserttitle
+
         \Large \insertsubtitle
-        \vspace{5mm}
       }
+      \vspace{\baselineskip}
       \Large \textsl{\\Thank you for your listening!}
-      \vspace{5mm}
-      \insertauthor \insertdate
+      \vspace{\baselineskip}
+
+      \small
+      \makebox[\textwidth][c]{
+        \insertauthor \hspace{1em} \insertdate
+      }
     \end{minipage}
   \end{frame}
 \endgroup

@@ -12,6 +12,24 @@ Tongji university Beamer template.
 
 ## 仓库组成
 
+* `/assets`
+模板展示
+
+* `/figures`
+图片文件
+
+* `/style`
+样式文件
+
+* `main.pdf`
+示例 PDF 文档文件
+
+* `main.tex`
+主文档文件
+
+* `make.bat`
+编译脚本文件
+
 ## 模板展示
 
 <p align="center">
@@ -47,4 +65,4 @@ Special thanks to [Federico Zenith](mailto:federico.zenith@sintef.no) for provid
 
 ## 文档更新日期
 
-2024年11月12日
+2024年11月13日

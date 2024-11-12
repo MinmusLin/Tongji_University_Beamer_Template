@@ -1,0 +1,222 @@
+\documentclass{beamer}
+\usepackage{amsfonts,amsmath,oldgerm}
+\usetheme{sintef}
+\usepackage{xeCJK}
+\newcommand{\testcolor}[1]{\colorbox{#1}{\textcolor{#1}{test}}~\texttt{#1}}
+\usefonttheme[onlymath]{serif}
+\titlebackground*{figures/background}
+\newcommand{\hrefcol}[2]{\textcolor{cyan}{\href{#1}{#2}}}
+
+% Page 1
+
+\title{标题}
+\subtitle{副标题}
+\course{计算机科学与技术学院}
+\author{林继申}
+\IDnumber{2250758}
+\date{2024年1月1日}
+
+\begin{document}
+\maketitle
+
+% Page 2
+
+\section{Basis}
+
+% Page 3
+
+\begin{frame}[fragile]{Title}
+\framesubtitle{Subtitle}
+Normal text
+
+\emph{Emphasized text}
+
+\alert{Alert text}
+
+\textbf{Bold text}
+
+\texttt{Monospaced text}
+
+\hrefcol{https://github.com/MinmusLin/Tongji_University_Beamer_Template}{Hyperlink text}
+
+\begin{equation*}
+\mathrm{i}\,\hslash\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = -\frac{\hslash^2}{2\,m}\nabla^2\Psi(\mathbf{r},t) + V(\mathbf{r})\Psi(\mathbf{r},t)
+\end{equation*}
+\end{frame}
+
+% Page 4
+
+\begin{frame}[fragile]{List}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+Unordered List:
+\begin{itemize}
+\item Item 1
+\begin{itemize}
+\item Item 1-1
+\item Item 1-2
+\item Item 1-3
+\end{itemize}
+\item Item 2
+\item Item 3
+\end{itemize}
+\end{column}
+\begin{column}{0.45\textwidth}
+Ordered List:
+\begin{enumerate}
+\item Item 1
+\begin{enumerate}
+\item Item 1-1
+\item Item 1-2
+\item Item 1-3
+\end{enumerate}
+\item Item 2
+\item Item 3
+\end{enumerate}
+\end{column}
+\end{columns}
+\end{frame}
+
+% Page 5
+
+\section{Block}
+
+% Page 6
+
+\begin{chapter}[figures/background_negative]{}{Special Slide}
+\begin{itemize}
+\item Basic Block
+\begin{itemize}
+\item Standard Block
+\item Code Block
+\end{itemize}
+\item Color Block
+\end{itemize}
+\end{chapter}
+
+% Page 7
+
+\begin{frame}[fragile]{Basic Block}
+\begin{block}{Standard Block}
+Standard Block
+\end{block}
+\begin{block}{Code Block}
+\begin{verbatim}
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+\end{verbatim}
+\end{block}
+\end{frame}
+
+% Page 8
+
+\begin{frame}[fragile]{Color Block}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+\begin{colorblock}[black]{sintefgrey}{Color Block}
+Color Block in \texttt{sintefgrey}
+\end{colorblock}
+\begin{colorblock}[white]{maincolor}{Color Block}
+Color Block in \texttt{maincolor}
+\end{colorblock}
+\begin{colorblock}[white]{sintefyellow}{Color Block}
+Color Block in \texttt{sintefyellow}
+\end{colorblock}
+\begin{colorblock}[white]{sintefpurple}{Color Block}
+Color Block in \texttt{sintefpurple}
+\end{colorblock}
+\end{column}
+\begin{column}{0.45\textwidth}
+\begin{colorblock}[black]{sinteflightgreen}{Color Block}
+Color Block in \texttt{sinteflightgreen}
+\end{colorblock}
+\begin{colorblock}[white]{sintefgreen}{Color Block}
+Color Block in \texttt{sintefgreen}
+\end{colorblock}
+\begin{colorblock}[white]{sintefdarkgreen}{Color Block}
+Color Block in \texttt{sintefdarkgreen}
+\end{colorblock}
+\begin{colorblock}[white]{sinteflilla}{Color Block}
+Color Block in \texttt{sinteflilla}
+\end{colorblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+% Page 9
+
+\section{Figure}
+
+% Page 10
+
+\subsection{Logo}
+
+\begin{frame}[fragile]{Logo}
+\begin{columns}
+\begin{column}{0.3\textwidth}
+logo.png:
+\includegraphics[width=\textwidth]
+{figures/logo}
+\end{column}
+\begin{column}{0.3\textwidth}
+logo\_negative.png:
+\includegraphics[width=\textwidth]
+{figures/logo_negative}
+\end{column}
+\end{columns}
+\end{frame}
+
+% Page 11
+
+\subsection{Background}
+
+\begin{frame}[fragile]{Background}
+\begin{columns}
+\begin{column}{0.45\textwidth}
+background.png:
+\includegraphics[width=\textwidth]
+{figures/background}
+\end{column}
+\begin{column}{0.45\textwidth}
+background\_negative.png:
+\includegraphics[width=\textwidth]
+{figures/background_negative}
+\end{column}
+\end{columns}
+\end{frame}
+
+% Page 12
+
+\section{Incremental Uncovering}
+
+% Page 13
+
+\begin{frame}[fragile]{Example}
+\visible<+->{Unordered List:}
+\begin{itemize}[<+->]
+\item Item 1
+\item Item 2
+\item Item 3
+\end{itemize}
+\begin{block}{Code Block}<+->
+\begin{verbatim}
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+\end{verbatim}
+\end{block}
+\end{frame}
+
+% Page 14
+
+\backmatter
+\end{document}

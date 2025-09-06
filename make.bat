@@ -2,7 +2,7 @@
 
 chcp 65001 >nul
 
-set THESIS=main
+set BEAMER=main
 
 if "%~1" == "" (
     set flag=all
@@ -21,7 +21,7 @@ if "%flag%" == "all" (
     )
     call :all
     if ERRORLEVEL 1 (
-        copy "%THESIS%.log" "error.log" >nul
+        copy "%BEAMER%.log" "error.log" >nul
         call :clean
         echo Error! Please check error.log for more details.
     ) else (
@@ -39,12 +39,12 @@ if "%flag%" == "clean" (
 
 :all
     set TEXINPUTS=style;%TEXINPUTS%
-    latexmk -xelatex -synctex=1 -quiet -interaction=nonstopmode -file-line-error -halt-on-error -shell-escape %THESIS% 2>nul
+    latexmk -xelatex -synctex=1 -quiet -interaction=nonstopmode -file-line-error -halt-on-error -shell-escape %BEAMER% 2>nul
 goto :EOF
 
 :clean
-    latexmk -quiet -c %THESIS% 2>nul
-    del /q "%THESIS%.nav" "%THESIS%.snm" "%THESIS%.vrb" "%THESIS%.synctex.gz" 2>nul
+    latexmk -quiet -c %BEAMER% 2>nul
+    del /q "%BEAMER%.nav" "%BEAMER%.snm" "%BEAMER%.vrb" "%BEAMER%.synctex.gz" 2>nul
 goto :EOF
 
 :help
